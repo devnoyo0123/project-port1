@@ -11,7 +11,7 @@ declare global {
 }
 
 interface PaymentFormProps {
-  // 필요한 props가 있다면 여기에 추가
+  // 필요한 props가 있다면 여기에 추가합니다.
 }
 
 export default function PaymentForm({}: PaymentFormProps) {
@@ -83,32 +83,14 @@ export default function PaymentForm({}: PaymentFormProps) {
       },
     };
 
-    console.log("결제 요청 데이터:", data);
-    
     // 결제창 호출
     IMP.request_pay(data, function(response: any) {
       if (response.success) {
         alert('결제 성공');
         console.log('결제 성공', response);
         
-        // // 백엔드 검증 API 호출
-        // fetch('/api/payments/verify', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify({
-        //     imp_uid: response.imp_uid,
-        //     merchant_uid: response.merchant_uid
-        //   }),
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //   console.log(data);
-        //   alert('결제 완료');
-        // })
-        // .catch(error => {
-        //   console.error('결제 검증 중 오류 발생:', error);
-        //   alert('결제 검증 중 오류가 발생했습니다.');
-        // });
+        // 백엔드 검증 API 호출 가능 부분
+
       } else {
         alert(`결제 실패: ${response.error_msg}`);
       }
