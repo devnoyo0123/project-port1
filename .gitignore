@@ -142,5 +142,28 @@ replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,kotlin
 
+# Environment files
 .env
 .env**
+
+# IntelliJ IDEA
+**/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Build directories\
+**/build/
+**/out/
+
+# Logs
+**/logs/
+*.log
+
+# Mac OS
+.DS_Store
+
+# Node modules (for Fe)
+**/node_modules/
+</parameter>
+</invoke>

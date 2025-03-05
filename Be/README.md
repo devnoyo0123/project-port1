@@ -1,7 +1,3 @@
-# project-port1
-
-# BE Readme
-
 # 포트원(PortOne) 결제 API 연동 서비스
 
 이 프로젝트는 포트원(PortOne) 결제 API를 연동하여 결제 정보 조회, 결제 취소 등의 기능을 제공하는 서비스입니다.
@@ -50,29 +46,29 @@ PORTONE_IMP_KEY="입력해주세요" PORTONE_IMP_SECRET="입력해주세요" ./g
 ### IDE에서 실행 (IntelliJ IDEA)
 
 1. **EnvFile 플러그인 설치**:
-- IntelliJ IDEA의 Plugins 메뉴에서 "EnvFile" 플러그인을 검색하여 설치합니다.
-- 플러그인 설치 후 IDE를 재시작합니다.
+  - IntelliJ IDEA의 Plugins 메뉴에서 "EnvFile" 플러그인을 검색하여 설치합니다.
+  - 플러그인 설치 후 IDE를 재시작합니다.
 
 2. **.env 파일 생성**:
-- 프로젝트 루트 디렉토리에 `.env` 파일을 생성합니다.
-- 다음과 같이 필요한 환경 변수를 설정합니다:
-  ```
-  PORTONE_IMP_KEY=입력해주세요
-  PORTONE_IMP_SECRET=입력해주세요
-  ```
-- `.gitignore` 파일에 `.env`를 추가하여 민감한 정보가 저장소에 커밋되지 않도록 합니다.
+  - 프로젝트 루트 디렉토리에 `.env` 파일을 생성합니다.
+  - 다음과 같이 필요한 환경 변수를 설정합니다:
+    ```
+    PORTONE_IMP_KEY=입력해주세요
+    PORTONE_IMP_SECRET=입력해주세요
+    ```
+  - `.gitignore` 파일에 `.env`를 추가하여 민감한 정보가 저장소에 커밋되지 않도록 합니다.
 
 3. **Run Configuration 설정**:
-- Run/Debug Configurations 메뉴를 엽니다.
-- 애플리케이션 실행 구성을 선택합니다.
-- "EnvFile" 탭을 선택합니다.
-- "Enable EnvFile" 체크박스를 선택합니다.
-- "+" 버튼을 클릭하여 `.env` 파일을 추가합니다.
-- "Apply" 및 "OK" 버튼을 클릭하여 설정을 저장합니다.
+  - Run/Debug Configurations 메뉴를 엽니다.
+  - 애플리케이션 실행 구성을 선택합니다.
+  - "EnvFile" 탭을 선택합니다.
+  - "Enable EnvFile" 체크박스를 선택합니다.
+  - "+" 버튼을 클릭하여 `.env` 파일을 추가합니다.
+  - "Apply" 및 "OK" 버튼을 클릭하여 설정을 저장합니다.
 
 4. **애플리케이션 실행**:
-- 일반적인 방법으로 애플리케이션을 실행합니다.
-- 환경 변수가 `.env` 파일에서 자동으로 로드됩니다.
+  - 일반적인 방법으로 애플리케이션을 실행합니다.
+  - 환경 변수가 `.env` 파일에서 자동으로 로드됩니다.
 
 ## API 엔드포인트
 
@@ -80,7 +76,7 @@ PORTONE_IMP_KEY="입력해주세요" PORTONE_IMP_SECRET="입력해주세요" ./g
 GET /api/payments/{impUid}
 
 - `impUid`: 포트원에서 발급한 결제 고유 ID
--
+- 
 ## API 문서
 
 Swagger UI를 통해 API 문서를 확인하고 테스트할 수 있습니다:
@@ -94,4 +90,3 @@ http://localhost:8080/swagger-ui.html
 - Spring AOP
 - Spring RestClient
 - Springdoc OpenAPI (Swagger)
-

@@ -1,0 +1,13 @@
+spring:
+  cache:
+    caffeine:
+      spec: maximumSize=100,expireAfterWrite=1h
+
+server:
+  port: 8080
+
+portone:
+  api:
+    base-url: https://api.iamport.kr
+    imp-key: "${PORTONE_IMP_KEY}"
+    imp-secret: "${PORTONE_IMP_SECRET}"
